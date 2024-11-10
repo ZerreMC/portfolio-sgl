@@ -1,0 +1,37 @@
+{
+  "title": "Portfolio de <SGL> - Desarrollador y Programador Web",
+  "name": "Sebastian ",
+  "surname": "Gutierrez",
+  "home": "Inicio",
+  "about": "Sobre mí",
+  "aboutTitle": "Sobre mí",
+  "contactTitle": "Contacto",
+  "en": "Inglés",
+  "es": "Español",
+  "ca": "Catalán",
+
+  "heroTitlePart1": "¡Hola! Soy",
+  "heroTitlePart2": "Sebastian Gutierrez",
+  "heroSubtitle": "Un estudiante de Ingeniería en Informática",
+
+  "descriptionAbout1Part1": "Encantado de conocerte! Soy",
+  "descriptionAbout1Part2": "Sebastian J. Gutierrez Llorca",
+  "descriptionAbout1Part3": ", un estudiante de Ingeniería en Informática. A lo largo de mi carrera, he desarrollado un gran interés en el desarrollo de software, desde el desarrollo de aplicaciones hasta",
+  "descriptionAbout1Part4": "desarrollo web",
+  "descriptionAbout1Part5": ". Me mantengo informado sobre nuevos desarrollos en el mundo de la tecnología para aplicar nuevas ideas y enfoques en mis proyectos.",
+
+  "descriptionAbout2Part1": "Soy una persona",
+  "descriptionAbout2Part2": "proactiva y trabajadora",
+  "descriptionAbout2Part3": ", que valora el",
+  "descriptionAbout2Part4": "trabajo en equipo",
+  "descriptionAbout2Part5": "y busca colaborar en proyectos que contribuyan tanto al crecimiento personal como colectivo. Aunque aún no tengo experiencia laboral, estoy listo para contribuir con mis habilidades y seguir aprendiendo de cada desafío que se me presente.",
+
+  "stackTitle": "Habilidades Técnicas",
+  "stackIntro1": "Debido a mi formación académica, he adquirido",
+  "stackIntro2": "conocimientos y experiencia en varios lenguajes de los cuales",
+  "stackIntro3": "destaco los siguientes",
+
+  "contactDescription1": "¿Tienes un proyecto o simplemente estás buscando contratar?",
+  "contactDescription2": "¡Trabajemos juntos!",
+  "getInTouch": "Ponte en contacto"
+}

@@ -1,3 +1,11 @@
+---
+import { ui, defaultLang } from "../i18n/ui.js";
+
+const url = new URL(Astro.request.url);
+const lang = url.searchParams.get("lang") || defaultLang;
+const t = ui[lang];
+---
+
 <section
   id="Contact"
   class="flex flex-col md:flex-row items-center justify-center bg-grayDark px-[5%] py-12 md:px-[8%] md:py-16 rounded-lg shadow-md w-full min-h-screen"
@@ -6,17 +14,17 @@
     <h2
       class="text-4xl md:text-5xl font-bold text-greenBright animate__animated animate__bounceIn"
     >
-      Contact
+      {t.contactTitle}
     </h2>
     <p
       class="text-lg md:text-2xl content-info-contact__text-info text-start animate__animated animate__fadeIn"
     >
-      Do you have a project or are you just looking to hire?
+      {t.contactDescription1}
     </p>
     <p
       class="text-2xl md:text-3xl font-semibold content-info-contact__text-info text-start animate__animated animate__fadeIn"
     >
-      Let's work together!
+      {t.contactDescription2}
     </p>
     <div class="flex space-x-6 mt-4">
       <a
@@ -57,7 +65,7 @@
         href="mailto:zerreytug.gll@gmail.com"
         class="bg-greenSoft font-bold px-6 py-3 rounded-lg shadow-md hover:bg-greenBright transition duration-300 animate__animated animate__bounceIn"
       >
-        Get in touch
+        {t.getInTouch}
       </a>
     </div>
   </div>

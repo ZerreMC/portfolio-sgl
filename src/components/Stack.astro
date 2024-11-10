@@ -1,4 +1,10 @@
 ---
+import { ui, defaultLang } from "../i18n/ui.js";
+
+const url = new URL(Astro.request.url);
+const lang = url.searchParams.get("lang") || defaultLang;
+const t = ui[lang];
+
 import IconCard from "./icons/IconCard.astro";
 
 const iconsTop = [
@@ -23,12 +29,12 @@ const iconsBottom = [
   <h2
     class="text-4xl text-greenBright font-bold text-center mb-4 animate__animated animate__fadeInDown"
   >
-    Stack
+    {t.stackTitle}
   </h2>
   <div class="text-center mb-8 animate__animated animate__fadeInDown">
-    <p>Due to my academic background, I have acquired</p>
-    <p>knowledge and experience of several languages of which</p>
-    <p>I highlight the following</p>
+    <p>{t.stackIntro1}</p>
+    <p>{t.stackIntro2}</p>
+    <p>{t.stackIntro3}</p>
   </div>
   <div
     class="flex flex-wrap justify-center gap-8 my-4 animate__animated animate__fadeInLeft"

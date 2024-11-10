@@ -1,0 +1,37 @@
+{
+    "title": "Portfolio of <SGL> - Web Developer and Programmer",
+    "name":"Sebastian ",
+    "surname":"Gutierrez",
+    "home": "Home",
+    "about": "About",
+    "aboutTitle": "About me",
+    "contactTitle": "Contact",
+    "en": "English",
+    "es": "Spanish",
+    "ca": "Catalan",
+  
+    "heroTitlePart1": "Hi! I'm",
+    "heroTitlePart2": "Sebastian Gutierrez",
+    "heroSubtitle": "A Computer Engineering student",
+  
+    "descriptionAbout1Part1": "Nice to meet you! I'm",
+    "descriptionAbout1Part2": "Sebastian J. Gutierrez Llorca",
+    "descriptionAbout1Part3": ", a student of Computer Engineering. Throughout my career, I have developed a great interest in software development, from application development to",
+    "descriptionAbout1Part4": "web development",
+    "descriptionAbout1Part5": ". I keep myself informed about new developments in the world of technology to apply new ideas and approaches in my projects.",
+  
+    "descriptionAbout2Part1": "I am a",
+    "descriptionAbout2Part2": "proactive and hard-working person",
+    "descriptionAbout2Part3": ", who values",
+    "descriptionAbout2Part4": "teamwork",
+    "descriptionAbout2Part5": "and seeks to collaborate in projects that contribute to both personal and collective growth. Although I have no work experience yet, I am ready to contribute with my skills and keep learning from every challenge that comes my way.",
+  
+    "stackTitle": "Stack",
+    "stackIntro1": "Due to my academic background, I have acquired",
+    "stackIntro2": "knowledge and experience of several languages of which",
+    "stackIntro3": "I highlight the following",
+  
+    "contactDescription1": "Do you have a project or are you just looking to hire?",
+    "contactDescription2": "Let's work together!",
+    "getInTouch": "Get in touch"
+}

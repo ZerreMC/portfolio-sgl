@@ -1,3 +1,11 @@
+---
+import { ui, defaultLang } from "../i18n/ui.js";
+
+const url = new URL(Astro.request.url);
+const lang = url.searchParams.get("lang") || defaultLang;
+const t = ui[lang];
+---
+
 <header
   class="fixed top-0 z-10 w-full bg-grayMedium border-b-4 border-grayDark shadow-md font-bold"
 >
@@ -10,25 +18,34 @@
       <span class="text-greenPrimary">/&gt;</span>
     </a>
     <a href="#" class="text-2xl hidden md:block">
-      <p>Sebastian <span class="text-greenPrimary">Gutierrez</span></p>
+      <p>{t.name} <span class="text-greenPrimary">{t.surname}</span></p>
     </a>
     <div class="hidden md:flex space-x-6 text-grayLight ml-auto mr-[6%]">
-      <a href="#" class="hover:text-greenPrimary transition-colors duration-300"
-        >Home</a
+      <a
+        href="#"
+        class="hover:text-greenPrimary transition-colors duration-300"
       >
+        {t.home}
+      </a>
       <a
         href="#About"
-        class="hover:text-greenPrimary transition-colors duration-300">About</a
+        class="hover:text-greenPrimary transition-colors duration-300"
       >
+        {t.about}
+      </a>
       <a
         href="#Stack"
-        class="hover:text-greenPrimary transition-colors duration-300">Stack</a
+        class="hover:text-greenPrimary transition-colors duration-300"
       >
+        {t.stackTitle}
+      </a>
       <a
         href="#Contact"
         class="hover:text-greenPrimary transition-colors duration-300"
-        >Contact</a
       >
+        {t.contactTitle}
+      </a>
+      <a> | </a>
       <a
         href="/cv/Sebastian_Gutierrez_CV.pdf"
         download
@@ -61,14 +78,14 @@
           id="languageMenu"
           class="hidden absolute top-full right-0 mt-2 w-40 bg-grayMedium rounded-md shadow-lg menu-shadow"
         >
-          <a href="#" class="block py-2 px-4 text-sm hover:bg-grayDark"
-            >English</a
+          <a href="?lang=en" class="block py-2 px-4 text-sm hover:bg-grayDark"
+            >{t.en}</a
           >
-          <a href="#" class="block py-2 px-4 text-sm hover:bg-grayDark"
-            >Español</a
+          <a href="?lang=es" class="block py-2 px-4 text-sm hover:bg-grayDark"
+            >{t.es}</a
           >
-          <a href="#" class="block py-2 px-4 text-sm hover:bg-grayDark"
-            >Català</a
+          <a href="?lang=ca" class="block py-2 px-4 text-sm hover:bg-grayDark"
+            >{t.ca}</a
           >
         </div>
       </div>
@@ -99,23 +116,27 @@
     <a
       href="#"
       class="block py-2 px-4 text-sm hover:bg-grayDark transition-colors duration-300"
-      >Home</a
     >
+      {t.home}
+    </a>
     <a
       href="#About"
       class="block py-2 px-4 text-sm hover:bg-grayDark transition-colors duration-300"
-      >About</a
     >
+      {t.about}
+    </a>
     <a
       href="#Stack"
       class="block py-2 px-4 text-sm hover:bg-grayDark transition-colors duration-300"
-      >Stack</a
     >
+      {t.stackTitle}
+    </a>
     <a
       href="#Contact"
       class="block py-2 px-4 text-sm hover:bg-grayDark transition-colors duration-300"
-      >Contact</a
     >
+      {t.contactTitle}
+    </a>
     <a
       href="/cv/Sebastian_Gutierrez_CV.pdf"
       download
@@ -145,13 +166,26 @@
     }
     languageMenu.classList.toggle("hidden");
   });
+
+  const urlParams = new URLSearchParams(window.location.search);
+  const lang = urlParams.get("lang") || localStorage.getItem("lang") || "en";
+
+  if (urlParams.get("lang")) {
+    localStorage.setItem("lang", lang);
+  }
+
+  document.querySelectorAll("#languageMenu a").forEach((link) => {
+    if (link.getAttribute("href").includes(`?lang=${lang}`)) {
+      link.classList.add("bg-grayDark"); // Agregar clase para destacar el idioma seleccionado
+    }
+  });
 </script>
 <style>
   #mobileMenu,
   #languageMenu {
-    max-height: 90vh; /* Limita la altura máxima */
-    overflow-y: auto; /* Habilita el scroll vertical */
-    scroll-behavior: smooth; /* Añade el desplazamiento suave */
+    max-height: 90vh;
+    overflow-y: auto;
+    scroll-behavior: smooth;
   }
   .menu-shadow {
     box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.2);

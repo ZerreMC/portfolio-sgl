@@ -1,5 +1,10 @@
 ---
 const backgroundImage = "/GreyBackground.png";
+import { ui, defaultLang } from "../i18n/ui.js";
+
+const url = new URL(Astro.request.url);
+const lang = url.searchParams.get("lang") || defaultLang;
+const t = ui[lang];
 ---
 
 <section
@@ -19,12 +24,13 @@ const backgroundImage = "/GreyBackground.png";
     <h1
       class="text-3xl md:text-5xl font-bold text-white mt-6 animate-fade-in break-words"
     >
-      Hi! I'm <span class="text-greenPrimary">Sebastian Gutierrez</span>
+      {t.heroTitlePart1}
+      <span class="text-greenPrimary">{t.heroTitlePart2}</span>
     </h1>
     <p
       class="text-lg md:text-xl mt-4 text-gray-300 animate-fade-in break-words"
     >
-      A Computer Engineering student
+      {t.heroSubtitle}
     </p>
   </div>
 </section>

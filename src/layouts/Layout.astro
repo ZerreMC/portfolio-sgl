@@ -1,14 +1,15 @@
 ---
-interface Props {
-  title: string;
-}
+import { ui, defaultLang } from "../i18n/ui.js";
 
-const { title } = Astro.props;
 import Header from "../components/Header.astro";
+
+const url = new URL(Astro.request.url);
+const lang = url.searchParams.get("lang") || defaultLang;
+const t = ui[lang];
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang={lang}>
   <head>
     <meta charset="UTF-8" />
     <meta name="description" content="Trainee portfolio" />
@@ -19,7 +20,7 @@ import Header from "../components/Header.astro";
       href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
     />
     <meta name="generator" content={Astro.generator} />
-    <title>{title}</title>
+    <title>{t.title}</title>
     <link
       href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap"
       rel="stylesheet"

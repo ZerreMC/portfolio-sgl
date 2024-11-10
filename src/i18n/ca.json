@@ -1,0 +1,37 @@
+{
+  "title": "Portafoli de <SGL> - Desenvolupador i Programador Web",
+  "name": "Sebastian ",
+  "surname": "Gutierrez",
+  "home": "Inici",
+  "about": "Sobre mi",
+  "aboutTitle": "Sobre mi",
+  "contactTitle": "Contacte",
+  "en": "Anglès",
+  "es": "Espanyol",
+  "ca": "Català",
+
+  "heroTitlePart1": "Hola! Sóc",
+  "heroTitlePart2": "Sebastian Gutierrez",
+  "heroSubtitle": "Un estudiant d'Enginyeria Informàtica",
+
+  "descriptionAbout1Part1": "Encantat de conèixer-te! Sóc",
+  "descriptionAbout1Part2": "Sebastian J. Gutierrez Llorca",
+  "descriptionAbout1Part3": ", un estudiant d'Enginyeria Informàtica. Al llarg de la meva carrera, he desenvolupat un gran interès pel desenvolupament de projectes, des del desenvolupament d'aplicacions fins al",
+  "descriptionAbout1Part4": "desenvolupament web",
+  "descriptionAbout1Part5": ". Em mantinc informat sobre els nous desenvolupaments en el món de la tecnologia per aplicar noves idees i enfocaments en els meus projectes.",
+
+  "descriptionAbout2Part1": "Sóc una persona",
+  "descriptionAbout2Part2": "proactiva i treballadora",
+  "descriptionAbout2Part3": ", que valora el",
+  "descriptionAbout2Part4": "treball en equip",
+  "descriptionAbout2Part5": "i busca col·laborar en projectes que contribueixin tant al creixement personal com col·lectiu. Tot i que encara no tinc experiència laboral, estic preparat per contribuir amb les meves habilitats i continuar aprenent de cada repte que se'm presenti.",
+
+  "stackTitle": "Habilitats Tècniques",
+  "stackIntro1": "Gràcies a la meva formació acadèmica, he adquirit",
+  "stackIntro2": "coneixements i experiència en diversos llenguatges dels quals",
+  "stackIntro3": "destaco els següents",
+
+  "contactDescription1": "Tens un projecte o simplement estàs buscant contractar?",
+  "contactDescription2": "Treballem junts!",
+  "getInTouch": "Posa't en contacte"
+}
