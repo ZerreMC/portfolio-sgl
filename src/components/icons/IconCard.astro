@@ -8,7 +8,12 @@ const { icon, altText } = Astro.props;
 ---
 
 <div
-  class="flex items-center justify-center w-36 h-36 rounded-full border-2 border-gray-300 bg-gradient-to-b from-grayMedium to-grayDark shadow-lg hover:scale-105 transition-transform duration-300"
+  class="relative group flex items-center justify-center w-28 h-28 sm:w-36 sm:h-36 rounded-full border-2 border-gray-300 bg-gradient-to-b from-grayMedium to-grayDark shadow-lg hover:scale-105 transition-transform duration-300"
 >
-  <img src={icon} alt={altText} class="w-20 h-20" />
+  <img src={icon} alt={altText} class="w-16 h-16 sm:w-20 sm:h-20" />
+  <div
+    class="absolute bottom-0 left-1/2 transform -translate-x-1/2 mt-2 sm:mt-3 bg-gray-700 text-white text-xs sm:text-sm rounded px-2 py-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap"
+  >
+    {altText}
+  </div>
 </div>
