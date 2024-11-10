@@ -54,7 +54,7 @@ const t = ui[lang];
         CV
       </a>
     </div>
-    <!--
+
     <div class="flex items-center space-x-2 ml-[6%]">
       <div class="relative">
         <button
@@ -90,102 +90,105 @@ const t = ui[lang];
           >
         </div>
       </div>
-       -->
-    <button id="menuToggle" class="md:hidden focus:outline-none text-grayLight">
-      <svg
-        class="w-6 h-6"
-        fill="none"
-        stroke="currentColor"
-        viewBox="0 0 24 24"
-        xmlns="http://www.w3.org/2000/svg"
+      <button
+        id="menuToggle"
+        class="md:hidden focus:outline-none text-grayLight"
       >
-        <path
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          stroke-width="2"
-          d="M4 6h16M4 12h16M4 18h16"></path>
-      </svg>
-    </button>
+        <svg
+          class="w-6 h-6"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+    </div>
   </nav>
+  <div
+    id="mobileMenu"
+    class="md:hidden hidden absolute top-full left-0 w-full bg-grayMedium border-y-2 border-grayDark shadow-lg menu-shadow"
+  >
+    <a
+      href="#header"
+      class="block py-2 px-4 text-sm hover:bg-grayDark transition-colors duration-300"
+    >
+      {t.home}
+    </a>
+    <a
+      href="#About"
+      class="block py-2 px-4 text-sm hover:bg-grayDark transition-colors duration-300"
+    >
+      {t.about}
+    </a>
+    <a
+      href="#Stack"
+      class="block py-2 px-4 text-sm hover:bg-grayDark transition-colors duration-300"
+    >
+      {t.stackTitle}
+    </a>
+    <a
+      href="#Contact"
+      class="block py-2 px-4 text-sm hover:bg-grayDark transition-colors duration-300"
+    >
+      {t.contactTitle}
+    </a>
+    <a
+      href="/cv/Sebastian_Gutierrez_CV.pdf"
+      download
+      class="block py-2 px-4 text-sm hover:bg-grayDark transition-colors duration-300"
+    >
+      CV
+    </a>
+  </div>
+
+  <script>
+    const menuToggle = document.getElementById("menuToggle");
+    const mobileMenu = document.getElementById("mobileMenu");
+    const languageToggle = document.getElementById("languageToggle");
+    const languageMenu = document.getElementById("languageMenu");
+
+    menuToggle.addEventListener("click", () => {
+      if (!languageMenu.classList.contains("hidden")) {
+        languageMenu.classList.add("hidden");
+      }
+      mobileMenu.classList.toggle("hidden");
+    });
+
+    languageToggle.addEventListener("click", () => {
+      if (!mobileMenu.classList.contains("hidden")) {
+        mobileMenu.classList.add("hidden");
+      }
+      languageMenu.classList.toggle("hidden");
+    });
+
+    const urlParams = new URLSearchParams(window.location.search);
+    const lang = urlParams.get("lang") || localStorage.getItem("lang") || "en";
+
+    if (urlParams.get("lang")) {
+      localStorage.setItem("lang", lang);
+    }
+
+    document.querySelectorAll("#languageMenu a").forEach((link) => {
+      if (link.getAttribute("href").includes(`?lang=${lang}`)) {
+        link.classList.add("bg-grayDark");
+      }
+    });
+  </script>
+  <style>
+    #mobileMenu,
+    #languageMenu {
+      max-height: 90vh;
+      overflow-y: auto;
+      scroll-behavior: smooth;
+    }
+    .menu-shadow {
+      box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.2);
+    }
+  </style>
 </header>
-<div
-  id="mobileMenu"
-  class="md:hidden hidden absolute top-full left-0 w-full bg-grayMedium border-y-2 border-grayDark shadow-lg menu-shadow"
->
-  <a
-    href="#header"
-    class="block py-2 px-4 text-sm hover:bg-grayDark transition-colors duration-300"
-  >
-    {t.home}
-  </a>
-  <a
-    href="#About"
-    class="block py-2 px-4 text-sm hover:bg-grayDark transition-colors duration-300"
-  >
-    {t.about}
-  </a>
-  <a
-    href="#Stack"
-    class="block py-2 px-4 text-sm hover:bg-grayDark transition-colors duration-300"
-  >
-    {t.stackTitle}
-  </a>
-  <a
-    href="#Contact"
-    class="block py-2 px-4 text-sm hover:bg-grayDark transition-colors duration-300"
-  >
-    {t.contactTitle}
-  </a>
-  <a
-    href="/cv/Sebastian_Gutierrez_CV.pdf"
-    download
-    class="block py-2 px-4 text-sm hover:bg-grayDark transition-colors duration-300"
-  >
-    CV
-  </a>
-</div>
-
-<script>
-  const menuToggle = document.getElementById("menuToggle");
-  const mobileMenu = document.getElementById("mobileMenu");
-  const languageToggle = document.getElementById("languageToggle");
-  const languageMenu = document.getElementById("languageMenu");
-
-  menuToggle.addEventListener("click", () => {
-    if (!languageMenu.classList.contains("hidden")) {
-      languageMenu.classList.add("hidden");
-    }
-    mobileMenu.classList.toggle("hidden");
-  });
-
-  languageToggle.addEventListener("click", () => {
-    if (!mobileMenu.classList.contains("hidden")) {
-      mobileMenu.classList.add("hidden");
-    }
-    languageMenu.classList.toggle("hidden");
-  });
-
-  const urlParams = new URLSearchParams(window.location.search);
-  const lang = urlParams.get("lang") || localStorage.getItem("lang") || "en";
-
-  if (urlParams.get("lang")) {
-    localStorage.setItem("lang", lang);
-  }
-
-  document.querySelectorAll("#languageMenu a").forEach((link) => {
-    if (link.getAttribute("href").includes(`?lang=${lang}`)) {
-      link.classList.add("bg-grayDark"); // Agregar clase para destacar el idioma seleccionado
-    }
-  });
-</script>
-<style>
-  #mobileMenu,
-  #languageMenu {
-    max-height: 90vh;
-    overflow-y: auto;
-    scroll-behavior: smooth;
-  }
-  .menu-shadow {
-    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.2);
-  }
-</style>
