@@ -1,0 +1,27 @@
+---
+const backgroundImage = "/GreyBackground.png";
+const profileImage = "../public/profileImage.jpg";
+---
+
+<section
+  class="relative h-screen flex items-center justify-center bg-cover bg-center"
+  style={`background-image: url('${backgroundImage}')`}
+>
+  <div class="flex flex-col items-center justify-center">
+    <div
+      class="w-80 h-auto rounded-full overflow-hidden drop-shadow-xl flex items-center justify-center bg-greenPrimary animate-float"
+    >
+      <img
+        src={profileImage}
+        alt="Profile Image"
+        class="w-full h-full object-cover"
+      />
+    </div>
+    <h1 class="text-4xl md:text-6xl font-bold text-white mt-6 animate-fade-in">
+      Hi! I'm <span class="text-greenPrimary">Sebastian Gutierrez</span>
+    </h1>
+    <p class="text-xl md:text-2xl mt-4 text-gray-300 animate-fade-in">
+      A Computer Engineering student
+    </p>
+  </div>
+</section>

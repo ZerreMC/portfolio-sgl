@@ -1,7 +1,25 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import Hero from "../components/Hero.astro";
+import About from "../components/About.astro";
+import Stack from "../components/Stack.astro";
+import Contact from "../components/Contact.astro";
+import Footer from "../components/Footer.astro";
 ---
 
-<Layout title="<SGL> Portfolio">
-  <main></main>
+<Layout title="Portfolio de <SGL> - Desarrollador y Programador Web">
+  <main class="mt-16 w-ful">
+    <Hero />
+    <section id="about">
+      <About />
+    </section>
+    <section id="stack">
+      <Stack />
+    </section>
+    <section id="contact">
+      <Contact />
+    </section>
+  </main>
+  <Footer />
 </Layout>
