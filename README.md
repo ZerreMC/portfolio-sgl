@@ -16,6 +16,9 @@ For this project, I focused on creating a visual aesthetic that is both modern a
 Typography plays a critical role, with a combination of sans-serif fonts that ensure clarity and align with current web design trends. I opted for Astro for building the site due to its optimization for static web pages and SEO capabilities. Tailwind CSS was chosen for rapid and efficient styling directly in the HTML, maintaining the page’s responsiveness and allowing for minimal external CSS file dependencies. The layout is structured with a responsive grid to accommodate different screen sizes, ensuring the page looks polished on both desktop and mobile views.
 
 ### Link to Figma Project
-[View Figma Project](https://www.figma.com/design/bQkBwzEM6DDyHcKWTH8a8M/%F0%9F%93%97Part-1%3A-Create-your-CV-website?node-id=10-2&node-type=canvas&t=aYntzIDUYZPhkaZx-0)
+[View Figma Project]([https://www.figma.com/design/bQkBwzEM6DDyHcKWTH8a8M/%F0%9F%93%97Part-1%3A-Create-your-CV-website?node-id=10-2&node-type=canvas&t=aYntzIDUYZPhkaZx-0](https://www.figma.com/design/bQkBwzEM6DDyHcKWTH8a8M/%F0%9F%93%97Part-1%3A-Create-your-CV-website?node-id=0-1&node-type=canvas&t=K6xcVlwZ8M2shXmS-0))
+
+### Link to website
+[Portfolio Deployed]((https://portfolio-sgl.vercel.app/))
 
 ---
