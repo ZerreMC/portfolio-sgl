@@ -1,15 +1,14 @@
 ---
 const backgroundImage = "/GreyBackground.png";
-const profileImage = "../public/profileImage.jpg";
 ---
 
 <section
-  class="relative h-screen flex items-center justify-center bg-cover bg-center"
+  class="relative min-h-screen flex flex-col items-center justify-center bg-cover bg-center px-4 md:px-12 overflow-auto"
   style={`background-image: url('${backgroundImage}')`}
 >
-  <div class="flex flex-col items-center justify-center">
+  <div class="max-w-screen-lg w-full mx-auto text-center">
     <div
-      class="w-80 h-auto rounded-full overflow-hidden drop-shadow-xl flex items-center justify-center bg-greenPrimary animate-float"
+      class="w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden drop-shadow-xl bg-greenPrimary animate-float mx-auto"
     >
       <img
         src="profileImage.jpg"
@@ -17,10 +16,14 @@ const profileImage = "../public/profileImage.jpg";
         class="w-full h-full object-cover"
       />
     </div>
-    <h1 class="text-4xl md:text-6xl font-bold text-white mt-6 animate-fade-in">
+    <h1
+      class="text-3xl md:text-5xl font-bold text-white mt-6 animate-fade-in break-words"
+    >
       Hi! I'm <span class="text-greenPrimary">Sebastian Gutierrez</span>
     </h1>
-    <p class="text-xl md:text-2xl mt-4 text-gray-300 animate-fade-in">
+    <p
+      class="text-lg md:text-xl mt-4 text-gray-300 animate-fade-in break-words"
+    >
       A Computer Engineering student
     </p>
   </div>
