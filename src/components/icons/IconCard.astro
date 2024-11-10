@@ -1,0 +1,14 @@
+---
+interface Props {
+  icon: string;
+  altText: string;
+}
+
+const { icon, altText } = Astro.props;
+---
+
+<div
+  class="flex items-center justify-center w-36 h-36 rounded-full border-2 border-gray-300 bg-gradient-to-b from-grayMedium to-grayDark shadow-lg hover:scale-105 transition-transform duration-300"
+>
+  <img src={icon} alt={altText} class="w-20 h-20" />
+</div>
