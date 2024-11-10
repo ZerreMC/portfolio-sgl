@@ -1,24 +1,38 @@
 ---
 import IconCard from "./icons/IconCard.astro";
 
-const icons = [
+const iconsTop = [
   { src: "/src/components/icons/icon-react.svg", alt: "React Logo" },
+  { src: "/src/components/icons/icon-css3.svg", alt: "CSS3 Logo" },
+  { src: "/src/components/icons/icon-html5.svg", alt: "HTML5 Logo" },
+  { src: "/src/components/icons/icon-js.svg", alt: "JavaScript Logo" },
+];
+
+const iconsBottom = [
+  { src: "/src/components/icons/icon-mysql.svg", alt: "MySQL Logo" },
   { src: "/src/components/icons/icon-C++_Logo.svg", alt: "C++ Logo" },
   { src: "/src/components/icons/icon-git.svg", alt: "Git Logo" },
-  { src: "/src/components/icons/icon-mysql.svg", alt: "MySQL Logo" },
-  { src: "/src/components/icons/icon-html5.svg", alt: "HTML5 Logo" },
-  { src: "/src/components/icons/icon-css3.svg", alt: "CSS3 Logo" },
-  { src: "/src/components/icons/icon-js.svg", alt: "JavaScript Logo" },
 ];
 ---
 
-<section class="py-12">
+<section
+  class="py-12 rounded-lg shadow-md"
+  style="background: radial-gradient(circle, #505050 0%, #363636 50%, #0D0D0D 100%);"
+>
   <h2 class="text-4xl text-greenPrimary font-bold text-center mb-4">Stack</h2>
-  <p class="text-center text-gray-300 mb-8">
-    Due to my academic background, I have acquired knowledge and experience of
-    several languages of which I highlight the following
-  </p>
-  <div class="flex flex-wrap justify-center gap-8">
-    {icons.map((icon) => <IconCard icon={icon.src} altText={icon.alt} />)}
+  <div class="text-center mb-8">
+    <p>Due to my academic background, I have acquired</p>
+    <p>knowledge and experience of several languages of which</p>
+    <p>I highlight the following</p>
+  </div>
+  <div
+    class="flex flex-wrap justify-center gap-8 mb-4 animate__animated animate__fadeInLeft"
+  >
+    {iconsTop.map((icon) => <IconCard icon={icon.src} altText={icon.alt} />)}
+  </div>
+  <div
+    class="flex flex-wrap justify-center gap-8 animate__animated animate__fadeInLeft"
+  >
+    {iconsBottom.map((icon) => <IconCard icon={icon.src} altText={icon.alt} />)}
   </div>
 </section>
