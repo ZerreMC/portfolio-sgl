@@ -6,18 +6,25 @@ const lang = url.searchParams.get("lang") || defaultLang;
 const t = ui[lang];
 
 import IconCard from "./icons/IconCard.astro";
+import React from "./src/components/icons/icon-react.svg";
+import Css3 from "./src/components/icons/icon-css3.svg";
+import Html5 from "./src/components/icons/icon-html5.svg";
+import Js from "./src/components/icons/icon-js.svg";
+import Mysql from "./src/components/icons/icon-mysql.svg";
+import Cpp from "./src/components/icons/icon-C++_Logo.svg";
+import Git from "./src/components/icons/icon-git.svg";
 
 const iconsTop = [
-  { src: "/src/components/icons/icon-react.svg", alt: "React" },
-  { src: "/src/components/icons/icon-css3.svg", alt: "CSS3" },
-  { src: "/src/components/icons/icon-html5.svg", alt: "HTML5" },
-  { src: "/src/components/icons/icon-js.svg", alt: "JavaScript" },
+  { src: React.src, alt: "React" },
+  { src: Css3.src, alt: "CSS3" },
+  { src: Html5.src, alt: "HTML5" },
+  { src: Js.src, alt: "JavaScript" },
 ];
 
 const iconsBottom = [
-  { src: "/src/components/icons/icon-mysql.svg", alt: "MySQL" },
-  { src: "/src/components/icons/icon-C++_Logo.svg", alt: "C++" },
-  { src: "/src/components/icons/icon-git.svg", alt: "Git" },
+  { src: Mysql.src, alt: "MySQL" },
+  { src: Cpp.src, alt: "C++" },
+  { src: Git.src, alt: "Git" },
 ];
 ---
 
