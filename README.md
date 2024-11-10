@@ -1,54 +1,24 @@
-# Astro Starter Kit: Basics
+# CV Portfolio Project
 
-```sh
-npm create astro@latest -- --template basics
-```
+## Project Analysis
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
+### User Profile
+The primary target user for this portfolio is a recruiter or hiring manager at a tech company who is looking to assess the potential of a university student for a front-end development role. This user expects to find clear and relevant information on the candidate's skills, academic background, and any technical proficiencies, as well as contact information to initiate potential interviews. The website is also aimed at technical leads or developers at companies who may want to evaluate the candidate for collaboration or internship opportunities.
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+### Information Architecture
+The information on this single-page portfolio is structured to provide a seamless user experience. The page begins with a **Header** containing a navigation menu that links to key sections like "Home," "About Me," "Stack," and "Contact." The header also features a button for language switching (ENG/CAT) to reach a broader audience. The **Main Section (Hero)** introduces the user with a personalized greeting and a concise description of the user's field of study. This section includes action buttons for downloading the CV in PDF format and navigating to the contact section.
 
-![just-the-basics](https://github.com/withastro/astro/assets/2244813/a0a5533c-a856-4198-8470-2d67b1d7c554)
+The **‘About Me’** section provides a summary of the user’s academic background, interests, and motivations. The **‘Technical Skills’** section categorizes the user’s qualifications, showcasing front-end languages, basic backend knowledge, and other relevant tools used in development. Lastly, the **‘Contact’** section invites users to reach out, presenting a friendly message along with icons that link to LinkedIn, GitHub, and an email contact form. The **Footer** section at the top of the page includes a copyright note that adds a professional touch to the site.
 
-## 🚀 Project Structure
+### Visual Design
+The visual design of the portfolio is built to reflect modern web development aesthetics. A dark color palette with neon-style gradients was chosen to create a striking yet professional look that mirrors the design seen in blockchain and tech-related projects. This color scheme was inspired by the need to capture attention while maintaining readability and a sense of professionalism.
 
-Inside of your Astro project, you'll see the following folders and files:
+Typography is critical for user engagement and readability, and this project employs sans-serif fonts that offer a modern, clean appearance. Astro was selected for building this site because of its specialization in static websites and its advantages in enhancing SEO performance. Tailwind CSS was chosen for its utility-first approach, enabling fast and efficient styling directly within HTML, leading to a highly customizable and responsive design. The layout leverages a flexible grid system that adapts seamlessly to different screen sizes, ensuring a consistent user experience on both desktop and mobile devices.
 
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src/
-│   ├── components/
-│   │   └── Card.astro
-│   ├── layouts/
-│   │   └── Layout.astro
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
+### Link to Figma Project
+[View Figma Project](https://www.figma.com/design/bQkBwzEM6DDyHcKWTH8a8M/%F0%9F%93%97Part-1%3A-Create-your-CV-website?node-id=0-1&t=aYntzIDUYZPhkaZx-1)
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+### Link to Website
+[Portfolio Deployed](https://portfolio-sgl.vercel.app/)
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
-
-Any static assets, like images, can be placed in the `public/` directory.
-
-## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
-
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+---
