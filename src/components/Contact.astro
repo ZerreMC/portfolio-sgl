@@ -1,9 +1,8 @@
 ---
-import { ui, defaultLang } from "../i18n/ui.js";
-
-const url = new URL(Astro.request.url);
-const lang = url.searchParams.get("lang") || defaultLang;
-const t = ui[lang];
+export interface Props {
+  t: (key: string) => string;
+}
+const { t } = Astro.props;
 ---
 
 <section
@@ -14,17 +13,17 @@ const t = ui[lang];
     <h2
       class="text-4xl md:text-5xl font-bold text-greenBright animate__animated animate__bounceIn"
     >
-      {t.contactTitle}
+      {t("contactTitle")}
     </h2>
     <p
       class="text-lg md:text-2xl content-info-contact__text-info text-start animate__animated animate__fadeIn"
     >
-      {t.contactDescription1}
+      {t("contactDescription1")}
     </p>
     <p
       class="text-2xl md:text-3xl font-semibold content-info-contact__text-info text-start animate__animated animate__fadeIn"
     >
-      {t.contactDescription2}
+      {t("contactDescription2")}
     </p>
     <div class="flex space-x-6 mt-4">
       <a
@@ -65,7 +64,7 @@ const t = ui[lang];
         href="mailto:zerreytug.gll@gmail.com"
         class="bg-greenSoft font-bold px-6 py-3 rounded-lg shadow-md hover:bg-greenBright transition duration-300 animate__animated animate__bounceIn"
       >
-        {t.getInTouch}
+        {t("getInTouch")}
       </a>
     </div>
   </div>

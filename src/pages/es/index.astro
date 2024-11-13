@@ -1,0 +1,30 @@
+---
+import { getLangFromUrl, useTranslations } from "../../i18n/utils";
+import Layout from "../../layouts/Layout.astro";
+import Hero from "../../components/Hero.astro";
+import About from "../../components/About.astro";
+import Stack from "../../components/Stack.astro";
+import Contact from "../../components/Contact.astro";
+import Footer from "../../components/Footer.astro";
+import Header from "../../components/Header.astro";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+
+<Layout>
+  <Header t={t} />
+  <main class="mt-16 w-full">
+    <Hero t={t} />
+    <section id="about">
+      <About t={t} />
+    </section>
+    <section id="stack">
+      <Stack t={t} />
+    </section>
+    <section id="contact">
+      <Contact t={t} />
+    </section>
+  </main>
+  <Footer />
+</Layout>

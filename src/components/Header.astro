@@ -1,9 +1,8 @@
 ---
-import { ui, defaultLang } from "../i18n/ui.js";
-
-const url = new URL(Astro.request.url);
-const lang = url.searchParams.get("lang") || defaultLang;
-const t = ui[lang];
+export interface Props {
+  t: (key: string) => string;
+}
+const { t } = Astro.props;
 ---
 
 <header
@@ -18,32 +17,32 @@ const t = ui[lang];
       <span class="text-greenPrimary">/&gt;</span>
     </a>
     <a href="#" class="text-2xl hidden md:block">
-      <p>{t.name} <span class="text-greenPrimary">{t.surname}</span></p>
+      <p>{t("name")} <span class="text-greenPrimary">{t("surname")}</span></p>
     </a>
     <div class="hidden md:flex space-x-6 text-grayLight ml-auto mr-[6%]">
       <a
         href="#"
         class="hover:text-greenPrimary transition-colors duration-300"
       >
-        {t.home}
+        {t("home")}
       </a>
       <a
         href="#About"
         class="hover:text-greenPrimary transition-colors duration-300"
       >
-        {t.about}
+        {t("about")}
       </a>
       <a
         href="#Stack"
         class="hover:text-greenPrimary transition-colors duration-300"
       >
-        {t.stackTitle}
+        {t("stackTitle")}
       </a>
       <a
         href="#Contact"
         class="hover:text-greenPrimary transition-colors duration-300"
       >
-        {t.contactTitle}
+        {t("contactTitle")}
       </a>
       <a> | </a>
       <a
@@ -79,14 +78,14 @@ const t = ui[lang];
           id="languageMenu"
           class="hidden absolute top-full right-0 mt-2 w-40 bg-grayMedium rounded-md shadow-lg menu-shadow"
         >
-          <a href="?lang=en" class="block py-2 px-4 text-sm hover:bg-grayDark"
-            >{t.en}</a
+          <a href="/en/" class="block py-2 px-4 text-sm hover:bg-grayDark"
+            >{t("en")}</a
           >
-          <a href="?lang=es" class="block py-2 px-4 text-sm hover:bg-grayDark"
-            >{t.es}</a
+          <a href="/es/" class="block py-2 px-4 text-sm hover:bg-grayDark"
+            >{t("es")}</a
           >
-          <a href="?lang=ca" class="block py-2 px-4 text-sm hover:bg-grayDark"
-            >{t.ca}</a
+          <a href="/ca/" class="block py-2 px-4 text-sm hover:bg-grayDark"
+            >{t("ca")}</a
           >
         </div>
       </div>
@@ -118,25 +117,25 @@ const t = ui[lang];
       href="#"
       class="block py-2 px-4 text-sm hover:bg-grayDark transition-colors duration-300"
     >
-      {t.home}
+      {t("home")}
     </a>
     <a
       href="#About"
       class="block py-2 px-4 text-sm hover:bg-grayDark transition-colors duration-300"
     >
-      {t.about}
+      {t("about")}
     </a>
     <a
       href="#Stack"
       class="block py-2 px-4 text-sm hover:bg-grayDark transition-colors duration-300"
     >
-      {t.stackTitle}
+      {t("stackTitle")}
     </a>
     <a
       href="#Contact"
       class="block py-2 px-4 text-sm hover:bg-grayDark transition-colors duration-300"
     >
-      {t.contactTitle}
+      {t("contactTitle")}
     </a>
     <a
       href="/cv/Sebastian_Gutierrez_CV.pdf"
@@ -148,36 +147,26 @@ const t = ui[lang];
   </div>
 
   <script>
+    // Elementos del DOM
     const menuToggle = document.getElementById("menuToggle");
     const mobileMenu = document.getElementById("mobileMenu");
     const languageToggle = document.getElementById("languageToggle");
     const languageMenu = document.getElementById("languageMenu");
 
-    menuToggle.addEventListener("click", () => {
+    // Evento para el botón del menú
+    menuToggle?.addEventListener("click", () => {
       if (!languageMenu.classList.contains("hidden")) {
         languageMenu.classList.add("hidden");
       }
       mobileMenu.classList.toggle("hidden");
     });
 
-    languageToggle.addEventListener("click", () => {
+    // Evento para el botón del cambio de idioma
+    languageToggle?.addEventListener("click", () => {
       if (!mobileMenu.classList.contains("hidden")) {
         mobileMenu.classList.add("hidden");
       }
       languageMenu.classList.toggle("hidden");
-    });
-
-    const urlParams = new URLSearchParams(window.location.search);
-    const lang = urlParams.get("lang") || localStorage.getItem("lang") || "en";
-
-    if (urlParams.get("lang")) {
-      localStorage.setItem("lang", lang);
-    }
-
-    document.querySelectorAll("#languageMenu a").forEach((link) => {
-      if (link.getAttribute("href").includes(`?lang=${lang}`)) {
-        link.classList.add("bg-grayDark");
-      }
     });
   </script>
   <style>

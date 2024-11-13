@@ -1,11 +1,8 @@
 ---
-import { ui, defaultLang } from "../i18n/ui.js";
+import { getLangFromUrl, useTranslations } from "../i18n/utils";
 
-import Header from "../components/Header.astro";
-
-const url = new URL(Astro.request.url);
-const lang = url.searchParams.get("lang") || defaultLang;
-const t = ui[lang];
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 ---
 
 <!doctype html>
@@ -20,7 +17,7 @@ const t = ui[lang];
       href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
     />
     <meta name="generator" content={Astro.generator} />
-    <title>{t.title}</title>
+    <title>{t("title")}</title>
     <link
       href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap"
       rel="stylesheet"
@@ -39,7 +36,6 @@ const t = ui[lang];
     </style>
   </head>
   <body class="bg-gray-900">
-    <Header id="Header" />
     <main>
       <slot />
     </main>
