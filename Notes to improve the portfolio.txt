@@ -1,0 +1,12 @@
+-   Remove avatar as profile picture
+-   Prioritise the LinkedIn link
+-   Clarify button functions
+- 	Improve accessibility of colours
+- 	Separate CV download link from navigation menu
+- 	Maintain consistency between sections
+- 	Use higher quality images
+- 	Highlight a specific project
+- 	Reduce the amount of text
+- 	Avoid unnecessary images
+- 	Check spacing in translated texts
+- 	Ask Anita for help with the design
